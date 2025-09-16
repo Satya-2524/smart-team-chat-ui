@@ -1,0 +1,87 @@
+/* base reset + fonts */
+:root{
+  --bg:#f6f7fb;
+  --card:#fff;
+  --muted:#9aa3b2;
+  --accent-1:#6d8cff;
+  --accent-2:#8b52ff;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{background:linear-gradient(180deg,#efeff4,#f6f7fb);color:#222}
+
+/* App shell */
+.app-root{display:flex;flex-direction:column;height:100vh;}
+
+/* Header topbar */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 22px;background:linear-gradient(90deg,#5a73ff,#8e4bff);color:white;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+.topbar .left{display:flex;align-items:center;gap:12px}
+.back{background:rgba(255,255,255,0.12);border:0;color:white;padding:6px 10px;border-radius:8px;cursor:pointer}
+.team{display:flex;gap:12px;align-items:center}
+.team .avatar{width:48px;height:48px;border-radius:10px;background:rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;font-size:20px}
+.team-name{font-weight:700}
+.team-sub{font-size:13px;opacity:0.9}
+
+.topbar .right{display:flex;gap:10px;align-items:center}
+.btn{padding:8px 12px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.btn.outline{background:rgba(255,255,255,0.15);color:white}
+.btn.primary{background:linear-gradient(90deg,#5a8bff,#8b52ff);color:white}
+.btn.ghost{background:transparent;color:white;border:1px solid rgba(255,255,255,0.12)}
+
+/* layout container */
+.container{display:flex;flex:1;min-height:0}
+.left-panel{width:260px;padding:18px;border-right:1px solid rgba(0,0,0,0.03);background:linear-gradient(180deg,#fbfbfe,#f7f8fb)}
+.chat-list{margin-top:12px}
+.new-chat-btn{background:linear-gradient(90deg,#ff7a59,#ffbb5c);color:white;padding:10px;border-radius:8px;font-weight:700;text-align:center;cursor:pointer}
+.chat-list-item{padding:10px;margin-top:10px;border-radius:8px;background:white;cursor:pointer;box-shadow:0 2px 4px rgba(0,0,0,0.03)}
+.chat-list-item.active{box-shadow:0 8px 20px rgba(99,88,125,0.06);border-left:4px solid #6d8cff}
+.chat-name{font-weight:600}
+.chat-participants{font-size:12px;color:var(--muted)}
+
+/* chat-area */
+.chat-area{flex:1;display:flex;flex-direction:column;min-width:0}
+.smart-reply-box{background:linear-gradient(180deg,#f3f7ff,#ffffff);padding:14px;border-bottom:1px solid rgba(0,0,0,0.03)}
+.smart-reply-box h4{margin:0 0 8px 0}
+.suggestions{display:flex;gap:10px;flex-wrap:wrap}
+.suggestion{background:#fff;padding:10px 14px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04);cursor:pointer}
+
+/* messages area */
+.messages{flex:1;padding:28px 36px;overflow:auto;min-height:0;background:transparent}
+.message-row{display:flex;margin-bottom:18px}
+.message-row.left{justify-content:flex-start}
+.message-row.right{justify-content:flex-end}
+
+/* left message card */
+.message-card{background:white;padding:14px 16px;border-radius:8px;max-width:420px;box-shadow:0 6px 18px rgba(52,63,84,0.04)}
+.message-card .author{font-weight:700;margin-bottom:6px}
+.message-card .text{color:#333}
+.message-card .time{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* right message bubble gradient */
+.message-bubble{background:linear-gradient(90deg,#6d8cff,#8b52ff);color:white;padding:14px 18px;border-radius:16px;max-width:560px;box-shadow:0 8px 30px rgba(139,82,255,0.08)}
+.message-bubble .time{font-size:12px;opacity:0.85;margin-top:8px}
+
+/* composer */
+.composer{display:flex;gap:10px;padding:16px;border-top:1px solid rgba(0,0,0,0.03);background:rgba(255,255,255,0.6)}
+.composer input{flex:1;padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);font-size:15px}
+.send-btn{width:48px;border-radius:12px;background:linear-gradient(90deg,#6d8cff,#8b52ff);color:white;border:0;cursor:pointer}
+
+/* modal new chat */
+.modal-overlay{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(13,18,30,0.35);display:flex;align-items:center;justify-content:center}
+.new-chat-card{width:420px;background:white;border-radius:14px;padding:22px;box-shadow:0 20px 60px rgba(12,16,40,0.15)}
+.card-header{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:12px}
+.card-icon{width:74px;height:74px;border-radius:20px;background:linear-gradient(90deg,#ff7a59,#ffbb5c);display:flex;align-items:center;justify-content:center;font-size:28px;color:white}
+.new-chat-card label{font-weight:700;margin-top:6px;display:block}
+.new-chat-card input{width:100%;padding:10px;margin-top:8px;border:1px solid rgba(0,0,0,0.06);border-radius:8px}
+.generate-btn{width:100%;background:linear-gradient(90deg,#ff7a59,#ffbb5c);color:white;border:0;padding:12px;border-radius:8px;margin-top:12px;cursor:pointer}
+.icebreaker-box{margin-top:12px;background:linear-gradient(180deg,#fff5f0,#fff);padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.03)}
+.icebreaker-title{font-weight:700;margin-bottom:6px}
+.icebreaker-text{background:rgba(0,0,0,0.03);padding:10px;border-radius:6px}
+.icebreaker-actions{display:flex;gap:12px;justify-content:flex-end;margin-top:10px}
+.icebreaker-actions .ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px;border-radius:6px;cursor:pointer}
+.start-chat-cta{width:100%;margin-top:12px;background:linear-gradient(90deg,#6d8cff,#8b52ff);color:white;padding:12px;border:0;border-radius:8px;cursor:pointer}
