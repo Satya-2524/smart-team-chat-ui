@@ -4,7 +4,7 @@ import Header from './components/Header';
 
 import ChatWindow from './components/ChatWindow';
 import NewChatModal from './components/NewChatModal';
-import ChatList from './components/chatList'
+import ChatList from './components/ChatComponent'
 
 // fixed naming convention errors
 function timeNow() {
