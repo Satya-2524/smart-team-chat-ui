@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header';
-import ChatList from "./components/chatList";
+
 import ChatWindow from './components/ChatWindow';
 import NewChatModal from './components/NewChatModal';
+import ChatList from './components/chatList'
 
-// Utility
+
 function timeNow() {
   const d = new Date();
   let hours = d.getHours();
@@ -18,7 +19,7 @@ function timeNow() {
 // Icebreaker templates
 const ICEBREAKER_TEMPLATES = [
   (name) => `Hi ${name}! Quick question — what's one tool or trick that's boosted your productivity recently?`,
-  (name) => `Hey ${name}, what's one small win you had this week? 🎉`,
+  (name) => `Hey ${name}, what's one small win you had this week? `,
   (name) => `Hi ${name}! If you could change one thing about our workflow, what would it be?`,
   (name) => `Hello ${name}, what part of this project are you most excited to work on?`,
   (name) => `Hey ${name} — what's one learning goal you'd like to hit in the next month?`,
@@ -28,7 +29,7 @@ const ICEBREAKER_TEMPLATES = [
 function generateSmartReplies() {
   return [
     "Fantastic! When should we kick off the next phase?",
-    "Great teamwork everyone! Let's celebrate this win 🎉",
+    "Great teamwork everyone! Let's celebrate this win ",
     "I'll prepare the project timeline for the next meeting."
   ];
 }
@@ -51,7 +52,7 @@ const INITIAL_CHATS = [
     name: 'Manish',
     participants: 2,
     messages: [
-      { id: 'm5', author: 'You', text: "Hi there! I hope you're having a great week. Excited for the collaboration! ✨", time: 'Now', side: 'right' }
+      { id: 'm5', author: 'You', text: "Hi there! I hope you're having a great week. Excited for the collaboration! ", time: 'Now', side: 'right' }
     ]
   }
 ];

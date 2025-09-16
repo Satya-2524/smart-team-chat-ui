@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ChatList({ chats, currentChatId, onSelect, onNewChat }) {
+export default function Chatlist({ chats, currentChatId, onSelect, onNewChat }) {
   return (
     <aside className="left-panel">
       <div className="new-chat-btn" onClick={onNewChat}>
