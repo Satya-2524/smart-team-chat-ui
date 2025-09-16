@@ -6,7 +6,7 @@ import ChatWindow from './components/ChatWindow';
 import NewChatModal from './components/NewChatModal';
 import ChatList from './components/chatList'
 
-
+// fixed naming convention errors
 function timeNow() {
   const d = new Date();
   let hours = d.getHours();
